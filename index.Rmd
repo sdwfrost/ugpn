@@ -307,9 +307,12 @@ g + theme_tree2() + geom_point(subset=.(isTip),aes(shape=host,color=host),size=4
 
 ## Conclusions
 
-- *Everyone* needs a Chair in One Health, Bioinformatics and Biostatistics
-- Need for a champion in these issues
-  - Sometimes we do need a multidisciplinary person in a multidisciplinary team
+> - *Everyone* needs a Chair in One Health, Bioinformatics and Biostatistics
+> - My examples come from infectious disease, but there are many settings where the combination of these disciplines may offer more than each alone
+> - Only touched on the statistical issues in these data
+>   - Frost et al. *Eight challenges in phylodynamic inference*
+>   - Eames et al. *Six challenges in measuring contact networks for use in modelling*
+> - More generally, we need champions in these areas to foster collaborations and to do good science
 
 --- ds:cobalt
 
