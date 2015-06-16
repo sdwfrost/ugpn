@@ -197,6 +197,8 @@ ggmap(mapdata,ylab="",xlab="")
 
 ## A rich source of data
 
+<img src="assets/img/symptoms.png" width="50%" style="background: white;">
+
 ---
 
 ## Challenges
@@ -228,19 +230,47 @@ Chin Long Chiang, 1985 (tongue in cheek)
 
 ## Barriers
 
-- Common goals, but different language, journals etc.
+- Different disciplines may have common goals, but different language, journals etc.
   - Biostatistics vs. bioinformatics
   - Statistics vs. machine learning
-- Prevents cross-fertilization of ideas
-- However, we are slowly seeing convergence
+  - Prevents cross-fertilization of ideas
+- We encourage our students and postdocs to focus on a very specific field, to lend them an identity
 
 ---
 
-## Mathematical modeling
+## Mathematical modeling of infectious disease
+
+- Twenty years ago, mathematical modeling of infectious disease was almost a 'data free' activity
+
 
 ---
 
-## Phylodynamics
+## Viral phylodynamics
+
+<blockquote>
+The study of how epidemiological, immunological, and evolutionary processes act and potentially interact to shape viral phylogenies
+</blockquote>
+Volz *et al.* PloS Comp Biol,<br> following Grenfell *et al.* Science 2004
+
+---
+
+## Species jumps in MERS-CoV
+
+```{r,echo=FALSE}
+library(ggtree)
+x <- read.beast("MERS_SaudiArabia_aligned_combined.tree.txt")
+tr <- x@phylo
+host <- tr$tip.label %>% strsplit(.,"_") %>% lapply(.,"[",2) %>% unlist
+dd <- data.frame(taxa=tr$tip.label,host=host)
+g <- ggtree(x, right=TRUE) %<+% dd
+g + theme_tree2() + geom_point(subset=.(isTip),aes(shape=host,color=host),size=4) + scale_x_continuous() + theme(panel.grid.major   = element_line(color="black", size=.2), panel.grid.minor   = element_line(color="grey", size=.2), panel.grid.major.y = element_blank(),panel.grid.minor.y = element_blank())
+```
+
+---
+
+## Inferred number and timing of jumps
+
+<img src="assets/img/jumps.svg" width="80%" style="background: white;">
 
 ---
 
@@ -261,7 +291,6 @@ Chin Long Chiang, 1985 (tongue in cheek)
 <img src="assets/img/heatmap.png" width="80%">
 
 <small> Andy Summers, Kaggle Scripts </small>
-
 
 ---
 
@@ -288,8 +317,14 @@ Chin Long Chiang, 1985 (tongue in cheek)
 
 ## Acknowledgements
 
-- Cambridge: Adam Brayne, James Lester
-- U. Wisconsin-Madison: Sarah Paige, Tony Goldberg, Sam Sibley
+- Cambridge:
+  - Adam Brayne
+  - James Lester
+  - Bethany Dearlove
+- U. Wisconsin-Madison:
+  - Sarah Paige
+  - Tony Goldberg
+  - Sam Sibley
 
 ---
 

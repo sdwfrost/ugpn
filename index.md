@@ -191,6 +191,12 @@ Genotype | Man | Pig |Other
 
 ---
 
+## A rich source of data
+
+<img src="assets/img/symptoms.png" width="50%" style="background: white;">
+
+---
+
 ## Challenges
 
 - Implementation
@@ -204,6 +210,7 @@ Genotype | Man | Pig |Other
 - Observational studies
   - Utility of 'causal inference' approaches
 - Big Data
+  - Does *not* refer to data that are simply large
   - Are we in a 'pre-Big Data' stage?
 
 ---
@@ -217,10 +224,50 @@ Chin Long Chiang, 1985 (tongue in cheek)
 
 ---
 
+## Barriers
+
+- Different disciplines may have common goals, but different language, journals etc.
+  - Biostatistics vs. bioinformatics
+  - Statistics vs. machine learning
+  - Prevents cross-fertilization of ideas
+- We encourage our students and postdocs to focus on a very specific field, to lend them an identity
+
+---
+
+## Mathematical modeling of infectious disease
+
+- Twenty years ago, mathematical modeling of infectious disease was almost a 'data free' activity
+
+
+---
+
+## Viral phylodynamics
+
+<blockquote>
+The study of how epidemiological, immunological, and evolutionary processes act and potentially interact to shape viral phylogenies
+</blockquote>
+Volz *et al.* PloS Comp Biol,<br> following Grenfell *et al.* Science 2004
+
+---
+
+## Species jumps in MERS-CoV
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+
+---
+
+## Inferred number and timing of jumps
+
+<img src="assets/img/jumps.svg" width="80%" style="background: white;">
+
+---
+
 ## Data Science
 
 - The field is becoming more liberal and inclusive
 - Shift towards the growing discipline of 'Data Science'
+  - As data become more complex, data wrangling becomes more important
+  - Need approaches for complex data that scale well
 - Current examples:
   - Kaggle West Nile Virus Prediction Competition
   - U.S. Government's Dengue Forecasting Project
@@ -258,8 +305,14 @@ Chin Long Chiang, 1985 (tongue in cheek)
 
 ## Acknowledgements
 
-- Cambridge: Adam Brayne, James Lester
-- U. Wisconsin-Madison: Sarah Paige, Tony Goldberg, Sam Sibley
+- Cambridge:
+  - Adam Brayne
+  - James Lester
+  - Bethany Dearlove
+- U. Wisconsin-Madison:
+  - Sarah Paige
+  - Tony Goldberg
+  - Sam Sibley
 
 ---
 
