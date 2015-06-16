@@ -234,14 +234,12 @@ Chin Long Chiang, 1985 (tongue in cheek)
 
 ---
 
-## Mathematical modeling of infectious disease
+## Mathematical modeling
 
 - Twenty years ago, mathematical modeling of infectious disease was almost a 'data free' activity
+  - Now, mathematical models are becoming important in lending mechanistic insights from data
 
-
----
-
-## Viral phylodynamics
+<br>
 
 <blockquote>
 The study of how epidemiological, immunological, and evolutionary processes act and potentially interact to shape viral phylogenies
