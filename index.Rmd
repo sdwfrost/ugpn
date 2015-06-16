@@ -1,0 +1,317 @@
+---
+title       : Why does Bristol need a Chair in One Health, Bioinformatics, and Biostatistics?
+subtitle    : 
+author      : Simon Frost
+job         : 
+framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+revealjs: 
+  transition: slide
+  center: "false"
+
+--- ds:cobalt
+
+## Why does Bristol need <br> a Chair in One Health, Bioinformatics, and Biostatistics?
+<br>
+<br>
+Simon Frost, *MA DPhil*
+
+*Dept. of Veterinary Medicine, and Institute of Public Health*
+
+*University of Cambridge*
+
+<script src="assets/js/jquery.js"></script>
+
+---
+
+## Introduction
+
+- Why does *anyone* need a Chair in One Health, Bioinformatics and Biostatistics?
+- Definitions of these disciplines
+- Why might they belong together?
+  - Examples of problems in global health
+  - Present a case study from our own work
+- Challenges and opportunities
+
+---
+
+## One Health
+
+<blockquote>
+The collaborative effort of multiple disciplines — working locally, nationally, and globally — to attain optimal health for people, animals and the environment
+</blockquote>
+
+AVMA, 2008
+
+---
+
+## Bioinformatics
+
+<blockquote>
+The study of informatic processes in biotic systems
+</blockquote>
+Ben Hesper and Paulien Hogeweg, 1970
+
+---
+
+## Biostatistics
+
+<blockquote>
+The application and development of statistical theory and methods for the study of phenomena arising in the life sciences
+</blockquote>
+Chin Long Chiang, 1985
+
+---
+
+### When might One Health, Bioinformatics, and Biostatistics all be important?
+
+> - Emerging infectious disease
+>    - Animal health has a direct impact on human health
+>        - e.g. Antimicrobial resistance
+> - Comparative pathology and medicine
+>    - Insights may be gained from investigating similar systems in parallel
+>        - e.g. Cancer
+> - Environment
+>    - Changes in the environment may affect both human and animal health
+>        - e.g. Climate change and vector borne disease
+> - Microbiomes and viromes
+
+<script>
+$('ul.incremental li').addClass('fragment')
+</script>
+
+---
+
+## Zoonoses
+
+- Many emerging infections are zoonotic in nature
+  - HIV, Ebola, MERS, ...
+- The increasing availability of sequence data allows us to ask questions such as:
+  - Where did an emerging disease come from?
+  - How many times (and when) did it jump host?
+  - Has there been adaptation to the new host?
+
+---
+
+## Hepatitis E virus (HEV)
+
+- HEV typically causes acute hepatitis, but is associated with increased morbidity/mortality in immunosuppressed individuals, including pregnant women
+- Exists in several distinct genotypes
+- Has HEV adapted to being specialised in humans?
+
+<br>
+
+Genotype | Man | Pig |Other
+---------|-----|-----|-----
+1        | Yes | No  |  
+2        | Yes | No  |  
+3        | Yes | Yes | deer, mongoose, rabbit, rat
+4        | Yes | Yes | cattle, sheep
+
+---
+
+## Global distribution of HEV genotypes
+
+<img src="assets/img/hevgenomap.png" width="820px" class="centred" style="margin: 10px 10px" />
+
+---
+
+## Selection in HEV
+
+<img src="assets/img/slacmapfull.png" width="820px" style="background:white;">
+
+---
+
+## Evolutionary rates by genotype
+
+<img src="assets/img/Clockrate.png" width="720px" class="centred" style="margin: 10px 10px" />
+
+---
+
+<img src="assets/img/keplogo.png" width="900px" class="centred" style="margin: 0px 0px" />
+
+---
+
+## Location
+
+```{r,echo=FALSE,eval=FALSE}
+require(ggmap)
+mapdata <- get_map(location=c(lon=30.39093,lat=0.504678),source="google",maptype="terrain",zoom=9)
+ggmap(mapdata,ylab="",xlab="")
+```
+
+<iframe src="kibalemap.html" width="700px" height="500px"></iframe>
+
+---
+
+## Red colobus
+
+<img src="assets/img/redcol.jpg" width="40%">
+
+---
+
+## Phylogenetic analysis of primate viruses
+
+- SIV, simian foamy virus, simian pegivirus, simian haemorrhagic fever virus...
+
+<img src="assets/img/siv_split_tree.svg" width="40%" style="background: white;">
+
+---
+
+## Animal injuries <br> (n=181 from 1240 participants)
+
+<img src="assets/img/paige_fig1a.png" width="60%">
+
+---
+
+## Primate contacts (n=125)
+
+<img src="assets/img/paige_fig1b.png" width="60%">
+
+---
+
+## Who comes into contact with primates?
+
+- Males (vs. females): odds ratio 3.57
+- Fragment community (vs. control): OR 6.53
+- Mukiga (vs. Mutooro): OR 1.93
+
+---
+
+## Cross-species spillover
+
+- Blood samples from local villagers are being tested for seropositivity to simian viruses (Bill Switzer, CDC)
+- In addition, we are using simple mobile phone based methods for collecting syndromic data
+
+---
+
+## Syndromic surveillance using SMS
+
+<img src="assets/img/symptoms.svg" width="50%" style="background: white;">
+
+---
+
+## A rich source of data
+
+---
+
+## Challenges
+
+- Implementation
+- Traditional delineations between fields
+- Funding territories
+
+---
+
+## Challenges in implementation
+
+- Observational studies
+  - Utility of 'causal inference' approaches
+- Big Data
+  - Does *not* refer to data that are simply large
+  - Are we in a 'pre-Big Data' stage?
+
+---
+
+## Barriers between disciplines
+
+<blockquote>
+[A]ll a biostatistician does is application. He relies on statisticians to develop statistical theory and methods, on probabilists for probabilistic concepts, and on mathematicians for mathematics. A biostatistician only need look up appropriate formulas and ask the computer to do the computation.
+</blockquote>
+Chin Long Chiang, 1985 (tongue in cheek)
+
+---
+
+## Barriers
+
+- Common goals, but different language, journals etc.
+  - Biostatistics vs. bioinformatics
+  - Statistics vs. machine learning
+- Prevents cross-fertilization of ideas
+- However, we are slowly seeing convergence
+
+---
+
+## Mathematical modeling
+
+---
+
+## Phylodynamics
+
+---
+
+## Data Science
+
+- The field is becoming more liberal and inclusive
+- Shift towards the growing discipline of 'Data Science'
+  - As data become more complex, data wrangling becomes more important
+  - Need approaches for complex data that scale well
+- Current examples:
+  - Kaggle West Nile Virus Prediction Competition
+  - U.S. Government's Dengue Forecasting Project
+
+---
+
+## Distribution of West Nile Virus positive mosquitoes in Chicago
+
+<img src="assets/img/heatmap.png" width="80%">
+
+<small> Andy Summers, Kaggle Scripts </small>
+
+
+---
+
+## Barriers in funding
+
+- Although lip service is paid to the importance of One Health, austerity has led funding bodies to focus on their core mission
+  - MRC: human health
+  - BBSRC: livestock
+  - NERC: environment
+  - ESRC: social and economic issues
+- Availability of funding in veterinary fields often much less than medical counterparts
+  - Veterinary clinical informatics
+- Challenges in piecing together a cohesive programme from separate applications, and harnessing a wider variety of funding sources
+
+---
+
+## Conclusions
+
+- *Everyone* needs a Chair in One Health, Bioinformatics and Biostatistics
+- Need for a champion in these issues
+  - Sometimes we do need a multidisciplinary person in a multidisciplinary team
+
+--- ds:cobalt
+
+## Acknowledgements
+
+- Cambridge: Adam Brayne, James Lester
+- U. Wisconsin-Madison: Sarah Paige, Tony Goldberg, Sam Sibley
+
+---
+
+## Microbiomes and viromes
+
+- Increasing evidence that microbiome composition plays a central role in health and disease
+- Viromes are fundamentally different than microbiomes as viruses need to infect cells to replicate
+- Sequencing technology has led to improved quantification of microbiomes and viromes, and to increased capacity to discover novel pathogens
+  - Need for bioinformatics to help process high throughput sequencing data
+  - Need for biostatistical models to help identify novel pathogens, for which simple pattern matching algorithms may fail to classify
+
+---
+
+## Viral discovery
+
+- We are working on viral discovery in a number of settings:
+  - Idiopathic human hepatitis ('hepatitis X')
+  - Immunosuppressed individuals
+- Pipeline to remove human DNA and RNA, leaving (hopefully) viral material
+- In addition to finding known (but undiagnosed) viruses, a large number of contig sequences do not easily classify
+
+```{r,echo=FALSE,eval=FALSE}
+publish(user = "sdwfrost", repo = "onehealth")
+```
+

@@ -1,0 +1,6 @@
+
+```{r, cache=FALSE, echo=FALSE}
+library(leaflet)
+m <- leaflet() %>% addTiles() %>% setView(lng=30.39093,lat=0.504678,zoom=4)
+m
+```
