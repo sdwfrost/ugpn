@@ -1,2 +1,2 @@
-# upgn
-Talk for UPGN
+# ugpn
+Talk for UGPN
