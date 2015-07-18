@@ -13,6 +13,7 @@
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
   <![endif]-->  <link rel="stylesheet" href = "assets/css/msa.css">
+<link rel="stylesheet" href = "assets/css/nv.d3.css">
 <link rel="stylesheet" href = "assets/css/reveal.css">
 <link rel="stylesheet" href = "assets/css/reveal.min.css">
 <link rel="stylesheet" href = "assets/css/ribbons.css">
@@ -22,7 +23,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section class='' data-state='cobalt' id='slide-1'>
+      <section class='' data-state='blackout' id='slide-1'>
   
   <h2 style="color:#FFFF00">Multiscale modeling of HIV dynamics and evolution</h2>
 
@@ -39,27 +40,35 @@
 
 <script src="assets/js/jquery.js"></script>
 
+<p><link rel=stylesheet href="assets/css/nv.d3.css"></link></p>
+
+<script src="assets/js/d3.js"></script>
+
+<script src="assets/js/nv.d3.js"></script>
+
+<script src="assets/js/viruspie.js"></script>
+
 </section>
 <section class='' data-state='' id='slide-2'>
-  <h2>Introduction</h2>
+  <h2>Why model?</h2>
   <ul>
-<li>Dynamics linked to evolution</li>
-<li>Link between within and between host scales</li>
+<li>We often have observational data
+
+<ul>
+<li>Models allow us to ask &#39;what if?&#39;</li>
+<li>Can also exploit &#39;natural experiments&#39;</li>
+</ul></li>
+<li>Typically inexpensive</li>
+<li>Models make assumptions explicit
+
+<ul>
+<li>Many researchers use models implicitly</li>
+</ul></li>
 </ul>
 
 </section>
 <section class='' data-state='' id='slide-3'>
-  <h2>Why model?</h2>
-  <ul>
-<li>Observational data</li>
-<li>Natural experiments</li>
-<li>Cheap</li>
-<li>Makes assumptions clear</li>
-</ul>
-
-</section>
-<section class='' data-state='' id='slide-4'>
-  <h2>People living with HIV</h2>
+  <h2>Why HIV?</h2>
   <div>
 <!-- IMAGEMAP START-->
 <script>
@@ -82,12 +91,12 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-5'>
+<section class='' data-state='' id='slide-4'>
   <h2>HIV in the UK</h2>
   <p><img src="assets/img/ukhiv.png" style="border: 0px;" width="80%"></p>
 
 </section>
-<section class='' data-state='' id='slide-6'>
+<section class='' data-state='' id='slide-5'>
   <h2>HIV drug resistance</h2>
   <ul>
 <li>HIV treatment has reduced the number of deaths due to HIV</li>
@@ -101,10 +110,32 @@ function Switch(picname,location) {
 <ul>
 <li>Individuals are infected with resistant virus</li>
 </ul></li>
+<li>Due to the problem of antiviral resistance, it is commonplace, at least in high income countries, to sequence part of the virus genome in order to determine whether someone is infected with a resistant virus</li>
 </ul>
 
 </section>
+<section class='' data-state='' id='slide-6'>
+  <h2>HIV is the most sequenced virus</h2>
+  <div id="viruspie" width="900px" height="600px" >
+    <svg width="800" height="500" style="font-family: 'xkcd';font-size: 20px;"></svg>
+</div>
+
+</section>
 <section class='' data-state='' id='slide-7'>
+  <h2>HIV as a model system</h2>
+  <ul>
+<li>HIV also makes a good model system
+
+<ul>
+<li>HIV has a short generation time</li>
+<li>Population dynamics within the individual can occur on a short timescale</li>
+<li>HIV has a high mutation rate</li>
+<li>HIV is <em>measurably evolving</em></li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-8'>
   <h2>The within-host life cycle of HIV</h2>
   <p><img src="assets/img/perelson_1996.png" style="border: 0px;" width="80%"></p>
 
@@ -113,12 +144,25 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-8'>
+<section class='' data-state='' id='slide-9'>
+  <h2>Multiple scales and HIV</h2>
+  <ul>
+<li>Within an infected cell</li>
+<li>Within pockets of target cells</li>
+<li>Within an organ</li>
+<li>Between organs</li>
+<li>Between pairs of individuals</li>
+<li>Within a population of individuals</li>
+<li>At the global level</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-10'>
   <h2>Target cells and evolution of resistance</h2>
   <p>Frost and McLean 1994</p>
 
 </section>
-<section class='' data-state='' id='slide-9'>
+<section class='' data-state='' id='slide-11'>
   <h2>Stochastic versus deterministic</h2>
   <ul>
 <li>Treatment response varies between individual</li>
@@ -132,7 +176,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-10'>
+<section class='' data-state='' id='slide-12'>
   <h2>Within-host evolution of M184</h2>
   <p><img src="assets/img/m184v.jpg" style="border: 0px;" width="80%"></p>
 
@@ -141,7 +185,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-11'>
+<section class='' data-state='' id='slide-13'>
   <h2>Rise of M184V</h2>
   <p><img src="assets/img/m184v_line.jpg" style="border: 0px;" width="80%"></p>
 
@@ -150,18 +194,24 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-12'>
+<section class='' data-state='' id='slide-14'>
   <h2>Mutation-selection balance</h2>
   <ul>
-<li>Genetic drift</li>
+<li>Prior to therapy, resistant mutations exist at <em>mutation-selection balance</em></li>
+<li>Population genetics theory tells us that there can be random fluctuations due to genetic drift</li>
+<li>The extent of these fluctuations can be captured by the concept of an <em>effective population size</em> or $N_e$</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-13'>
+<section class='' data-state='' id='slide-15'>
   <h2>Why stochastic?</h2>
-  
+  <ul>
+<li>There are <em>hundreds of millions</em> of infected cells in a typical HIV-infected person</li>
+<li>How can stochasticity be important when the population size is so large</li>
+</ul>
+
 </section>
-<section class='' data-state='' id='slide-14'>
+<section class='' data-state='' id='slide-16'>
   <h2>Within host metapopulation dynamics</h2>
   <p><img src="assets/img/metapop.jpg" style="border: 0px;" width="40%"></p>
 
@@ -170,7 +220,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-15'>
+<section class='' data-state='' id='slide-17'>
   <h2>Model</h2>
   <ul>
 <li>Implications:
@@ -192,7 +242,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-16'>
+<section class='' data-state='' id='slide-18'>
   <h2>Evidence for micro-scale spatial differentiation</h2>
   <div>
 <table frame="hsides" rules="groups" id="table-1">
@@ -266,11 +316,11 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-17'>
+<section class='' data-state='' id='slide-19'>
   <h2>Evidence for local founder effects</h2>
   
 </section>
-<section class='' data-state='' id='slide-18'>
+<section class='' data-state='' id='slide-20'>
   <h2>Transmission and reversion of drug resistance</h2>
   <p><img src="assets/img/transmittedresistance.jpg" style="border: 0px;" width="80%"></p>
 
@@ -279,7 +329,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-19'>
+<section class='' data-state='' id='slide-21'>
   <h2>Reversion of transmitted resistance</h2>
   <p><img src="assets/img/k103n.jpg" style="border: 0px;" width="80%"></p>
 
@@ -288,7 +338,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-20'>
+<section class='' data-state='' id='slide-22'>
   <h2>Resistant mutants are &#39;fit&#39;</h2>
   <p><img src="assets/img/k103rc.jpg" style="border: 0px;" width="80%"></p>
 
@@ -297,11 +347,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-21'>
-  <h2>Transmission fitness</h2>
-  
-</section>
-<section class='' data-state='' id='slide-22'>
+<section class='' data-state='' id='slide-23'>
   <h2>Summary</h2>
   <ul>
 <li>Acquired resistance can emerge rapidly
@@ -319,7 +365,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-23'>
+<section class='' data-state='' id='slide-24'>
   <h2>Escape from immune responses</h2>
   <ul>
 <li>In addition to selection by antiviral agents, there is also selection from the adaptive immune response
@@ -333,7 +379,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-24'>
+<section class='' data-state='' id='slide-25'>
   <h2>Dynamics of antibody responses</h2>
   <p><img src="assets/img/abreview.png" style="border: 0px;" width="60%"></p>
 
@@ -342,12 +388,12 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-25'>
+<section class='' data-state='' id='slide-26'>
   <h2>Measuring antibody responses</h2>
   <p><img src="assets/img/monogram.png" style="border: 0px;" width="80%"></p>
 
 </section>
-<section class='' data-state='' id='slide-26'>
+<section class='' data-state='' id='slide-27'>
   <h2>Within-host antibody responses</h2>
   <p><img src="assets/img/neut2.png" style="border: 0px;" width="50%"></p>
 
@@ -356,7 +402,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-27'>
+<section class='' data-state='' id='slide-28'>
   <h2>Variation between individuals</h2>
   <p><img src="assets/img/neut3.png" style="border: 0px;" width="85%"></p>
 
@@ -365,7 +411,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-28'>
+<section class='' data-state='' id='slide-29'>
   <h2>Modeling neutralisation escape</h2>
   <p><img src="assets/img/modelneut.png" style="border: 0px;" width="50%"></p>
 
@@ -374,7 +420,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-29'>
+<section class='' data-state='' id='slide-30'>
   <h2>Cross-reactivity and escape</h2>
   <p><img src="assets/img/modelneut2.png" style="border: 0px;" width="85%"></p>
 
@@ -383,7 +429,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-30'>
+<section class='' data-state='' id='slide-31'>
   <h2>Population level patterns</h2>
   <ul>
 <li>If HIV escapes from the immune system rapidly, how is it recognised at all, decades after its spread?
@@ -394,7 +440,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-31'>
+<section class='' data-state='' id='slide-32'>
   <h2>Cellular responses</h2>
   <ul>
 <li>Another important arm of the adaptive immune response is the cytotoxic T lymphocyte (CTL) response</li>
@@ -410,7 +456,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-32'>
+<section class='' data-state='' id='slide-33'>
   <h2>CTL responses and escape</h2>
   <p><img src="assets/img/poon2007fig2.png" style="border: 0px;" width="85%"></p>
 
@@ -419,7 +465,7 @@ function Switch(picname,location) {
 </div>
 
 </section>
-<section class='' data-state='' id='slide-33'>
+<section class='' data-state='' id='slide-34'>
   <h2>Model predictions</h2>
   <ul>
 <li>Evolution at the population level reflects the &#39;averaging&#39; over multiple individuals</li>
@@ -427,7 +473,20 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-34'>
+<section class='' data-state='' id='slide-35'>
+  <h2>Capturing selection pressure</h2>
+  <ul>
+<li>A common bioinformatic approach to detecting selection is to compare $dN$ and $dS$:
+
+<ul>
+<li>$dN$: the rate of <em>nonsynonymous</em> or amino acid changing mutations</li>
+<li>$dS$: the rate of <em>synonymous</em> or amino acid preserving mutations</li>
+</ul></li>
+<li>The relative rates of $dN$ and $dS$ are informative about different types of selection</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-36'>
   <h2>Conclusions</h2>
   <ul>
 <li>Our ability to understand what goes on <em>within</em> the HIV infected individual is attributable to increased data
@@ -442,7 +501,7 @@ function Switch(picname,location) {
 </ul>
 
 </section>
-<section class='' data-state='cobalt' id='slide-35'>
+<section class='' data-state='cobalt' id='slide-37'>
   <h2>Acknowledgements</h2>
   
 </section>

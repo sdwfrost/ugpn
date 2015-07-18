@@ -14,7 +14,7 @@ revealjs:
   theme: simple
   transition: linear
 
---- ds:cobalt
+--- ds:blackout
 
 
 
@@ -33,26 +33,25 @@ revealjs:
 <img width="10%" style="border:0px;" src="assets/img/cu.svg">
 
 <script src="assets/js/jquery.js"></script>
-
----
-
-## Introduction
-
-- Dynamics linked to evolution
-- Link between within and between host scales
+<link rel=stylesheet href="assets/css/nv.d3.css"></link>
+<script src="assets/js/d3.js"></script>
+<script src="assets/js/nv.d3.js"></script>
+<script src="assets/js/viruspie.js"></script>
 
 ---
 
 ## Why model?
 
-- Observational data
-- Natural experiments
-- Cheap
-- Makes assumptions clear
+- We often have observational data
+  - Models allow us to ask 'what if?'
+  - Can also exploit 'natural experiments'
+- Typically inexpensive
+- Models make assumptions explicit
+  - Many researchers use models implicitly
 
 ---
 
-## People living with HIV
+## Why HIV?
 
 <div>
 <!-- IMAGEMAP START-->
@@ -93,6 +92,25 @@ function Switch(picname,location) {
     - Emerges in response to therapy
 - At the population level, we also observed **transmitted drug resistance**
   - Individuals are infected with resistant virus
+- Due to the problem of antiviral resistance, it is commonplace, at least in high income countries, to sequence part of the virus genome in order to determine whether someone is infected with a resistant virus
+
+---
+
+## HIV is the most sequenced virus
+
+<div id="viruspie" width="900px" height="600px" >
+	<svg width="800" height="500" style="font-family: 'xkcd';font-size: 20px;"></svg>
+</div>
+
+---
+
+## HIV as a model system
+
+- HIV also makes a good model system
+  - HIV has a short generation time
+    - Population dynamics within the individual can occur on a short timescale
+  - HIV has a high mutation rate
+    - HIV is *measurably evolving*
 
 ---
 
@@ -103,6 +121,18 @@ function Switch(picname,location) {
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Perelson (1996)</em></p>
 </div>
+
+---
+
+## Multiple scales and HIV
+
+- Within an infected cell
+- Within pockets of target cells
+- Within an organ
+- Between organs
+- Between pairs of individuals
+- Within a population of individuals
+- At the global level
 
 ---
 
@@ -144,11 +174,16 @@ Frost and McLean 1994
 
 ## Mutation-selection balance
 
-- Genetic drift
+- Prior to therapy, resistant mutations exist at *mutation-selection balance*
+- Population genetics theory tells us that there can be random fluctuations due to genetic drift
+- The extent of these fluctuations can be captured by the concept of an *effective population size* or $N_e$
 
 ---
 
 ## Why stochastic?
+
+- There are *hundreds of millions* of infected cells in a typical HIV-infected person
+- How can stochasticity be important when the population size is so large
 
 ---
 
@@ -159,7 +194,6 @@ Frost and McLean 1994
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. PNAS 2001</em></p>
 </div>
-
 
 ---
 
@@ -285,10 +319,6 @@ Frost and McLean 1994
 
 ---
 
-## Transmission fitness
-
----
-
 ## Summary
 
 - Acquired resistance can emerge rapidly
@@ -399,6 +429,15 @@ Frost and McLean 1994
 
 - Evolution at the population level reflects the 'averaging' over multiple individuals
 - Variation within the individual is affected by the transmission rate
+
+---
+
+## Capturing selection pressure
+
+- A common bioinformatic approach to detecting selection is to compare $dN$ and $dS$:
+  - $dN$: the rate of *nonsynonymous* or amino acid changing mutations
+  - $dS$: the rate of *synonymous* or amino acid preserving mutations
+- The relative rates of $dN$ and $dS$ are informative about different types of selection
 
 ---
 
