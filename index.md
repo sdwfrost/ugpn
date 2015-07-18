@@ -1,28 +1,36 @@
 ---
-title       : Why does Bristol need a Chair in One Health, Bioinformatics, and Biostatistics?
+title       : Multiscale modeling of HIV
 subtitle    : 
 author      : Simon Frost
 job         : 
 framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 revealjs: 
-  transition: slide
   center: "false"
+  theme: simple
+  transition: linear
 
 --- ds:cobalt
 
-## Why does Bristol need <br> a Chair in One Health, Bioinformatics, and Biostatistics?
+
+
+
+
+
+<h2 style="color:#FFFF00">Multiscale modeling of HIV dynamics and evolution</h2>
 <br>
 <br>
-Simon Frost, *MA DPhil*
+<h3 style="color:#FFFFFF">Simon Frost, M.A. D.Phil.</h3>
 
 *Dept. of Veterinary Medicine, and Institute of Public Health*
 
 *University of Cambridge*
+
+<img width="10%" style="border:0px;" src="assets/img/cu.svg">
 
 <script src="assets/js/jquery.js"></script>
 
@@ -30,310 +38,383 @@ Simon Frost, *MA DPhil*
 
 ## Introduction
 
-- Why does *anyone* need a Chair in One Health, Bioinformatics and Biostatistics?
-- Definitions of these disciplines
-- Why might they belong together?
-  - Examples of problems in global health
-  - Present a case study from our own work
-- Challenges and opportunities
+- Dynamics linked to evolution
+- Link between within and between host scales
 
 ---
 
-## One Health
+## Why model?
 
-<blockquote>
-The collaborative effort of multiple disciplines — working locally, nationally, and globally — to attain optimal health for people, animals and the environment
-</blockquote>
-
-AVMA, 2008
-
----
-
-## Bioinformatics
-
-<blockquote>
-The study of informatic processes in biotic systems
-</blockquote>
-Ben Hesper and Paulien Hogeweg, 1970
+- Observational data
+- Natural experiments
+- Cheap
+- Makes assumptions clear
 
 ---
 
-## Biostatistics
+## People living with HIV
 
-<blockquote>
-The application and development of statistical theory and methods for the study of phenomena arising in the life sciences
-</blockquote>
-Chin Long Chiang, 1985
-
----
-
-### When might One Health, Bioinformatics, and Biostatistics all be important?
-
-> - Emerging infectious disease
->    - Animal health has a direct impact on human health
->        - e.g. Antimicrobial resistance
-> - Comparative pathology and medicine
->    - Insights may be gained from investigating similar systems in parallel
->        - e.g. Cancer
-> - Environment
->    - Changes in the environment may affect both human and animal health
->        - e.g. Climate change and vector borne disease
-> - Microbiomes and viromes
-
+<div>
+<!-- IMAGEMAP START-->
 <script>
-$('ul.incremental li').addClass('fragment')
+function Switch(picname,location) {
+    document.images[picname].src = location;
+}
 </script>
+<img src="assets/img/aids1.jpg" width="780" height="400" usemap="#aids-imagemap" name="map" border=0 alt="" style="border:0px;"/>
+<map name="aids-imagemap">
+<area shape="rect" coords="5,13,194,40" href="" onMouseOver="Switch('map','assets/img/aids1.jpg')">
+<area shape="rect" coords="198,13,388,40" href="" onMouseOver="Switch('map','assets/img/aids2.jpg')">
+<area shape="rect" coords="392,13,582,40" href="" onMouseOver="Switch('map','assets/img/aids3.jpg')">
+<area shape="rect" coords="586,13,776,40" href="" onMouseOver="Switch('map','assets/img/aids4.jpg')">
+</map>
+<!-- IMAGEMAP END-->
+</div>
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Graphic: CBC Data:UNAIDS</em></p>
+</div>
+
 
 ---
 
-## Zoonoses
+## HIV in the UK
 
-- Many emerging infections are zoonotic in nature
-  - HIV, Ebola, MERS, ...
-- The increasing availability of sequence data allows us to ask questions such as:
-  - Where did an emerging disease come from?
-  - How many times (and when) did it jump host?
-  - Has there been adaptation to the new host?
+
+
+<img src="assets/img/ukhiv.png" style="border: 0px;" width="80%">
 
 ---
 
-## Hepatitis E virus (HEV)
+## HIV drug resistance
 
-- HEV typically causes acute hepatitis, but is associated with increased morbidity/mortality in immunosuppressed individuals, including pregnant women
-- Exists in several distinct genotypes
-- Has HEV adapted to being specialised in humans?
-
-<br>
-
-Genotype | Man | Pig |Other
----------|-----|-----|-----
-1        | Yes | No  |  
-2        | Yes | No  |  
-3        | Yes | Yes | deer, mongoose, rabbit, rat
-4        | Yes | Yes | cattle, sheep
+- HIV treatment has reduced the number of deaths due to HIV
+- However, treatment is associated with **acquired drug resistance**
+    - Emerges in response to therapy
+- At the population level, we also observed **transmitted drug resistance**
+  - Individuals are infected with resistant virus
 
 ---
 
-## Global distribution of HEV genotypes
+## The within-host life cycle of HIV
 
-<img src="assets/img/hevgenomap.png" width="820px" class="centred" style="margin: 10px 10px" />
+<img src="assets/img/perelson_1996.png" style="border: 0px;" width="80%">
 
----
-
-## Selection in HEV
-
-<img src="assets/img/slacmapfull.png" width="820px" style="background:white;">
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Perelson (1996)</em></p>
+</div>
 
 ---
 
-## Evolutionary rates by genotype
+## Target cells and evolution of resistance
 
-<img src="assets/img/Clockrate.png" width="720px" class="centred" style="margin: 10px 10px" />
-
----
-
-<img src="assets/img/keplogo.png" width="900px" class="centred" style="margin: 0px 0px" />
+Frost and McLean 1994
 
 ---
 
-## Location
+## Stochastic versus deterministic
 
-
-
-<iframe src="kibalemap.html" width="700px" height="500px"></iframe>
-
----
-
-## Red colobus
-
-<img src="assets/img/redcol.jpg" width="40%">
+- Treatment response varies between individual
+- Many biological models are deterministic in nature
+  - Model takes the form of differential equations
+  - Variability between individuals reflects biological variation
+- Variation could arise simply through chance effects
 
 ---
 
-## Phylogenetic analysis of primate viruses
+## Within-host evolution of M184
 
-- SIV, simian foamy virus, simian pegivirus, simian haemorrhagic fever virus...
+<img src="assets/img/m184v.jpg" style="border: 0px;" width="80%">
 
-<img src="assets/img/siv_split_tree.svg" width="40%" style="background: white;">
-
----
-
-## Animal injuries <br> (n=181 from 1240 participants)
-
-<img src="assets/img/paige_fig1a.png" width="60%">
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Frost et al. J. Virol. 2000</em></p>
+</div>
 
 ---
 
-## Primate contacts (n=125)
+## Rise of M184V
 
-<img src="assets/img/paige_fig1b.png" width="60%">
+<img src="assets/img/m184v_line.jpg" style="border: 0px;" width="80%">
 
----
-
-## Who comes into contact with primates?
-
-- Males (vs. females): odds ratio 3.57
-- Fragment community (vs. control): OR 6.53
-- Mukiga (vs. Mutooro): OR 1.93
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Frost et al. J. Virol. 2000</em></p>
+</div>
 
 ---
 
-## Cross-species spillover
+## Mutation-selection balance
 
-- Blood samples from local villagers are being tested for seropositivity to simian viruses (Bill Switzer, CDC)
-- In addition, we are using simple mobile phone based methods for collecting syndromic data
-
----
-
-## Syndromic surveillance using SMS
-
-<img src="assets/img/symptoms.svg" width="50%" style="background: white;">
+- Genetic drift
 
 ---
 
-## A rich source of data
-
-<img src="assets/img/symptoms.png" width="50%" style="background: white;">
+## Why stochastic?
 
 ---
 
-## Challenges
+## Within host metapopulation dynamics
 
-- Implementation
-- Traditional delineations between fields
-- Funding territories
+<img src="assets/img/metapop.jpg" style="border: 0px;" width="40%">
 
----
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Frost et al. PNAS 2001</em></p>
+</div>
 
-## Challenges in implementation
-
-- Observational studies
-  - Utility of 'causal inference' approaches
-- Big Data
-  - Does *not* refer to data that are simply large
-  - Are we in a 'pre-Big Data' stage?
 
 ---
 
-## Barriers between disciplines
+## Model
 
-<blockquote>
-[A]ll a biostatistician does is application. He relies on statisticians to develop statistical theory and methods, on probabilists for probabilistic concepts, and on mathematicians for mathematics. A biostatistician only need look up appropriate formulas and ask the computer to do the computation.
-</blockquote>
-Chin Long Chiang, 1985 (tongue in cheek)
+- Implications:
+  - Repeated founder effects result in low effective population sizes
 
----
+<img src="assets/img/metapop_eqn.gif" style="border: 0px;" width="40%">
 
-## Barriers
-
-- Different disciplines may have common goals, but different language, journals etc.
-  - Biostatistics vs. bioinformatics
-  - Statistics vs. machine learning
-  - Prevents cross-fertilization of ideas
-- We encourage our students and postdocs to focus on a very specific field, to lend them an identity
+- Predictions:
+  - There should be fine-scale spatial structure
+  - Within subpopulations, there should be evidence of founder effects
 
 ---
 
-## Mathematical modeling
+## Evidence for micro-scale spatial differentiation
 
-- Twenty years ago, mathematical modeling of infectious disease was almost a 'data free' activity
-  - Now, mathematical models are becoming important in lending mechanistic insights from data
-
-<br>
-
-<blockquote>
-The study of how epidemiological, immunological, and evolutionary processes act and potentially interact to shape viral phylogenies
-</blockquote>
-Volz *et al.* PloS Comp Biol,<br> following Grenfell *et al.* Science 2004
+<div>
+<table frame="hsides" rules="groups" id="table-1">
+                           <thead id="thead-1">
+                              <tr id="tr-1">
+                                 <th rowspan="1" colspan="1" id="th-1">Patient</th>
+                                 <th rowspan="1" colspan="1" id="th-2">Number of pulps analyzed</th>
+                                 <th rowspan="1" colspan="1" id="th-3">Between-pulp
+                                    variation <em>V</em><sub>a</sub></th>
+                                 <th rowspan="1" colspan="1" id="th-4">Total variation
+                                    <em>V</em><sub>b</sub></th>
+                                 <th rowspan="1" colspan="1" id="th-5"><em>F</em><sub>ST</sub>
+                                    (⩵<em>V</em><sub>a</sub>/<em>V</em><sub>b</sub>)
+                                    
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody align="center" id="tbody-1" class="table-center">
+                              <tr id="tr-2">
+                                 <td id="td-1">B</td>
+                                 <td id="td-2">3</td>
+                                 <td id="td-3">1.453</td>
+                                 <td id="td-4">2.446</td>
+                                 <td id="td-5">0.594
+                                    
+                                 </td>
+                              </tr>
+                              <tr id="tr-3">
+                                 <td id="td-6">L</td>
+                                 <td id="td-7">4</td>
+                                 <td id="td-8">0.836</td>
+                                 <td id="td-9">2.266</td>
+                                 <td id="td-10">0.369
+                                    
+                                 </td>
+                              </tr>
+                              <tr id="tr-4">
+                                 <td id="td-11">M</td>
+                                 <td id="td-12">2</td>
+                                 <td id="td-13">−0.041</td>
+                                 <td id="td-14">2.380</td>
+                                 <td id="td-15">−0.017<sup>ns</sup></td>
+                              </tr>
+                              <tr id="tr-5">
+                                 <td id="td-16">N</td>
+                                 <td id="td-17">2</td>
+                                 <td id="td-18">0.055</td>
+                                 <td id="td-19">0.706</td>
+                                 <td id="td-20">0.078
+                                    
+                                 </td>
+                              </tr>
+                              <tr id="tr-6">
+                                 <td id="td-21">P</td>
+                                 <td id="td-22">5</td>
+                                 <td id="td-23">0.463</td>
+                                 <td id="td-24">2.154</td>
+                                 <td id="td-25">0.215
+                                    
+                                 </td>
+                              </tr>
+                              <tr id="tr-7">
+                                 <td id="td-26">S</td>
+                                 <td id="td-27">4</td>
+                                 <td id="td-28">0.146</td>
+                                 <td id="td-29">1.629</td>
+                                 <td id="td-30">0.090</td>
+                              </tr>
+                           </tbody>
+                        </table>
+</div>
 
 ---
 
-## Species jumps in MERS-CoV
-
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+## Evidence for local founder effects
 
 ---
 
-## Inferred number and timing of jumps
+## Transmission and reversion of drug resistance
 
-<img src="assets/img/jumps.svg" width="80%" style="background: white;">
+<img src="assets/img/transmittedresistance.jpg" style="border: 0px;" width="80%">
 
----
-
-## Data Science
-
-- The field is becoming more liberal and inclusive
-- Shift towards the growing discipline of 'Data Science'
-  - As data become more complex, data wrangling becomes more important
-  - Need approaches for complex data that scale well
-- Current examples:
-  - Kaggle West Nile Virus Prediction Competition
-  - U.S. Government's Dengue Forecasting Project
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. J. Virol. (2008)</em></p>
+</div>
 
 ---
 
-## Distribution of West Nile Virus positive mosquitoes in Chicago
+## Reversion of transmitted resistance
 
-<img src="assets/img/heatmap.png" width="80%">
+<img src="assets/img/k103n.jpg" style="border: 0px;" width="80%">
 
-<small> Andy Summers, Kaggle Scripts </small>
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. J. Virol. (2008)</em></p>
+</div>
 
 ---
 
-## Barriers in funding
+## Resistant mutants are 'fit'
 
-- Although lip service is paid to the importance of One Health, austerity has led funding bodies to focus on their core mission
-  - MRC: human health
-  - BBSRC: livestock
-  - NERC: environment
-  - ESRC: social and economic issues
-- Availability of funding in veterinary fields often much less than medical counterparts
-  - Veterinary clinical informatics
-- Challenges in piecing together a cohesive programme from separate applications, and harnessing a wider variety of funding sources
+<img src="assets/img/k103rc.jpg" style="border: 0px;" width="80%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. J. Virol. (2008)</em></p>
+</div>
+
+---
+
+## Transmission fitness
+
+---
+
+## Summary
+
+- Acquired resistance can emerge rapidly
+  - Pre-existing, but variable, resistant virus
+  - Decreasing wild-type viruses results in more target cells, facilitating the emergence of resistance
+- Transmitted fitness may revert rapidly
+- Given rapid escape and slow reversion, we would expect transmitted resistance to be very common
+  - Transmitted resistance is rarer than expected, possibly due to lower transmission rates
+
+---
+
+## Escape from immune responses
+
+- In addition to selection by antiviral agents, there is also selection from the adaptive immune response
+  - Humoral (antibody) responses
+  - Cellular (cytotoxic T lymphocyte, CTL) responses
+- What are the dynamics of escape *within* infected individuals?
+- How is this affected by transmission *between* individuals?
+
+---
+
+## Dynamics of antibody responses
+
+<img src="assets/img/abreview.png" style="border: 0px;" width="60%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. Curr. Opin. HIV AIDS (2008)</em></p>
+</div>
+
+---
+
+## Measuring antibody responses
+
+<img src="assets/img/monogram.png" style="border: 0px;" width="80%">
+
+---
+
+## Within-host antibody responses
+
+<img src="assets/img/neut2.png" style="border: 0px;" width="50%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. PNAS (2005)</em></p>
+</div>
+
+---
+
+## Variation between individuals
+
+<img src="assets/img/neut3.png" style="border: 0px;" width="85%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. PNAS (2005)</em></p>
+</div>
+
+---
+
+## Modeling neutralisation escape
+
+<img src="assets/img/modelneut.png" style="border: 0px;" width="50%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. PNAS (2005)</em></p>
+</div>
+
+---
+
+## Cross-reactivity and escape
+
+<img src="assets/img/modelneut2.png" style="border: 0px;" width="85%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Little, Frost et al. PNAS (2005)</em></p>
+</div>
+
+---
+
+## Population level patterns
+
+- If HIV escapes from the immune system rapidly, how is it recognised at all, decades after its spread?
+  - Escape is highly specific
+
+---
+
+## Cellular responses
+
+- Another important arm of the adaptive immune response is the cytotoxic T lymphocyte (CTL) response
+- CTLs recognise infected cells, as these cells present viral peptides at their surface
+- HIV can escape specific CTL responses through a small number of mutations
+- On transmission with an escape mutant:
+  - Mutant will revert back to wild type (if mutant is not recognised)
+  - Mutant will remain (if mutant is recognised)
+- These lead to complex dynamics, depending on the transmission rate
+
+---
+
+## CTL responses and escape
+
+<img src="assets/img/poon2007fig2.png" style="border: 0px;" width="85%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Poon et al. PLoS Path 2007</em></p>
+</div>
+
+---
+
+## Model predictions
+
+- Evolution at the population level reflects the 'averaging' over multiple individuals
+- Variation within the individual is affected by the transmission rate
 
 ---
 
 ## Conclusions
 
-> - *Everyone* needs a Chair in One Health, Bioinformatics and Biostatistics
-> - My examples come from infectious disease, but there are many settings where the combination of these disciplines may offer more than each alone
-> - Only touched on the statistical issues in these data
->   - Frost et al. *Eight challenges in phylodynamic inference*
->   - Eames et al. *Six challenges in measuring contact networks for use in modelling*
-> - More generally, we need champions in these areas to foster collaborations and to do good science
+- Our ability to understand what goes on *within* the HIV infected individual is attributable to increased data
+  - Availability of therapy
+  - Sequence data
+  - Phenotypic data
+  - Modeling has moved from being 'data-free' to one which is data-intensive
+- HIV evolution and dynamics occurs at the 'front line' within the individual, and variation at the population level reflects averaging over the selection pressures from many hosts
+
 
 --- ds:cobalt
 
 ## Acknowledgements
-
-- Cambridge:
-  - Adam Brayne
-  - James Lester
-  - Bethany Dearlove
-- U. Wisconsin-Madison:
-  - Sarah Paige
-  - Tony Goldberg
-  - Sam Sibley
-
----
-
-## Microbiomes and viromes
-
-- Increasing evidence that microbiome composition plays a central role in health and disease
-- Viromes are fundamentally different than microbiomes as viruses need to infect cells to replicate
-- Sequencing technology has led to improved quantification of microbiomes and viromes, and to increased capacity to discover novel pathogens
-  - Need for bioinformatics to help process high throughput sequencing data
-  - Need for biostatistical models to help identify novel pathogens, for which simple pattern matching algorithms may fail to classify
-
----
-
-## Viral discovery
-
-- We are working on viral discovery in a number of settings:
-  - Idiopathic human hepatitis ('hepatitis X')
-  - Immunosuppressed individuals
-- Pipeline to remove human DNA and RNA, leaving (hopefully) viral material
-- In addition to finding known (but undiagnosed) viruses, a large number of contig sequences do not easily classify
 
 
 
