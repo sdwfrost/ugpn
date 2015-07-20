@@ -129,7 +129,7 @@ function Switch(picname,location) {
 
 ## The within-host life cycle of HIV
 
-<img src="assets/img/perelson_1996.png" style="border: 0px;" width="70%">
+<img src="assets/img/perelson_1996.png" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Perelson (1996)</em></p>
@@ -177,7 +177,7 @@ function Switch(picname,location) {
 ## Resistance higher with higher doses
 
 <br>
-<img src="assets/img/aztresistance.png" style="border: 0px;" width="70%">
+<img src="assets/img/aztresistance.png" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>McLean and Nowak (1992)</em></p>
@@ -205,13 +205,13 @@ function Switch(picname,location) {
 
 ---
 
-## Evolution of resistance to 3TC
+## Evolution of 3TC resistance
 
 - 3TC or lamivudine was the second drug to be licensed
 - High level resistance can be achieved through mutations at a single site in the reverse transcriptase
 
 <br>
-<img src="assets/img/nontams.png" style="border: 0px;" width="50%">
+<img src="assets/img/nontams.png" style="border: 0px;" width="40%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p>http://hivdb.stanford.edu/pages/3DStructures/rt.html</p>
@@ -227,7 +227,7 @@ function Switch(picname,location) {
 
 ## Within-host evolution of M184
 
-<img src="assets/img/m184v.jpg" style="border: 0px;" width="80%">
+<img src="assets/img/m184v.jpg" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. J. Virol. 2000</em></p>
