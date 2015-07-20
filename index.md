@@ -479,7 +479,7 @@ $$
 
 ## Variation between individuals
 
-<img src="assets/img/neut3.png" style="border: 0px;" width="85%">
+<img src="assets/img/neut3.png" style="border: 0px;" width="75%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. PNAS (2005)</em></p>
@@ -493,7 +493,7 @@ $$
 - Some individuals *do* mount powerful responses
   - Too little, too late
 
-<img src="assets/img/hs97.png" style="border: 0px;" width="50%">
+<img src="assets/img/hs97.png" style="border: 0px;" width="40%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Haraguchi and Sasaki (1997)</em></p>
@@ -503,7 +503,7 @@ $$
 
 ## Model results
 
-<img src="assets/img/modelneut.png" style="border: 0px;" width="50%">
+<img src="assets/img/modelneut.png" style="border: 0px;" width="35%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Little, Frost et al. PNAS (2005)</em></p>
