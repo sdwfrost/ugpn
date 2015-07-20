@@ -52,3 +52,7 @@ pkgmaker
 RcppOctave
 epiwidgets
 extrafontdb
+threejs
+V8
+reshape2
+DiagrammeR

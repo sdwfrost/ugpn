@@ -42,12 +42,12 @@ revealjs:
 
 ## Why model?
 
-- We often have observational data
-  - Models allow us to ask 'what if?'
-  - Can also exploit 'natural experiments'
+- We often only have observational data
+  - Models allow us to ask 'what if?, and exploit 'natural experiments'
 - Typically inexpensive
 - Models make assumptions explicit
   - Many researchers use models implicitly
+- Most powerful when they make *testable predictions* or are just plain wrong
 
 ---
 
@@ -77,11 +77,23 @@ function Switch(picname,location) {
 
 ---
 
+## HIV in the Philippines
+
+<img src="assets/fig/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style=border:0px; />
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Data: Philippines DoH, May 2015</em></p>
+</div>
+
+---
+
 ## HIV in the UK
 
+<img src="assets/img/ukhiv.png" style="border: 0px;" width="70%">
 
-
-<img src="assets/img/ukhiv.png" style="border: 0px;" width="80%">
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>PHE (2014) HIV in the United Kingdom</em></p>
+</div>
 
 ---
 
@@ -92,7 +104,7 @@ function Switch(picname,location) {
     - Emerges in response to therapy
 - At the population level, we also observed **transmitted drug resistance**
   - Individuals are infected with resistant virus
-- Due to the problem of antiviral resistance, it is commonplace, at least in high income countries, to sequence part of the virus genome in order to determine whether someone is infected with a resistant virus
+- We can sequence part of the viral genome to tell whether it is resistant or not
 
 ---
 
@@ -104,19 +116,20 @@ function Switch(picname,location) {
 
 ---
 
-## HIV as a model system
+## HIV as a model evolutionary system
 
-- HIV also makes a good model system
-  - HIV has a short generation time
-    - Population dynamics within the individual can occur on a short timescale
-  - HIV has a high mutation rate
-    - HIV is *measurably evolving*
+- In addition to there being a vast amount of data, HIV can also tell us about evolutionary processes
+- HIV has a short generation time
+  - Population dynamics within the individual can occur on a short timescale
+- HIV has a high mutation rate
+- There is a large number of infected cells within a typical infected person
+- HIV is *measurably evolving*
 
 ---
 
 ## The within-host life cycle of HIV
 
-<img src="assets/img/perelson_1996.png" style="border: 0px;" width="80%">
+<img src="assets/img/perelson_1996.png" style="border: 0px;" width="70%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Perelson (1996)</em></p>
@@ -136,9 +149,49 @@ function Switch(picname,location) {
 
 ---
 
-## Target cells and evolution of resistance
+## Examples
 
-Frost and McLean 1994
+- Evolution of drug resistance
+- Evolution of immune escape
+  - Humoral responses
+  - Cellular responses
+- Molecular epidemiology
+
+---
+
+## Evolution of resistance to AZT
+
+- AZT was the first antiviral agent to be licensed for treatment of HIV
+- Although CD4+ counts recovered, the virus rebounded
+
+
+<br>
+<img src="assets/img/aztdynamics.png" style="border: 0px;" width="70%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>McLean and Nowak (1992)</em></p>
+</div>
+
+---
+
+## Resistance higher with higher doses
+
+<br>
+<img src="assets/img/aztresistance.png" style="border: 0px;" width="70%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>McLean and Nowak (1992)</em></p>
+</div>
+
+---
+
+## Resistance and dose
+
+<img src="assets/fig/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style=border:0px; />
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Model from: McLean and Nowak (1992)</em></p>
+</div>
 
 ---
 
@@ -149,6 +202,26 @@ Frost and McLean 1994
   - Model takes the form of differential equations
   - Variability between individuals reflects biological variation
 - Variation could arise simply through chance effects
+
+---
+
+## Evolution of resistance to 3TC
+
+- 3TC or lamivudine was the second drug to be licensed
+- High level resistance can be achieved through mutations at a single site in the reverse transcriptase
+
+<br>
+<img src="assets/img/nontams.png" style="border: 0px;" width="50%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p>http://hivdb.stanford.edu/pages/3DStructures/rt.html</p>
+</div>
+
+---
+
+## Evolution of M184I/V
+
+<iframe src="m184v.html" style="border:0px;" width="800px" height="600px"></iframe>
 
 ---
 
@@ -180,10 +253,17 @@ Frost and McLean 1994
 
 ---
 
+## Fluctuations in M184V/I before therapy
+
+![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5-1.png) 
+
+
+---
+
 ## Why stochastic?
 
 - There are *hundreds of millions* of infected cells in a typical HIV-infected person
-- How can stochasticity be important when the population size is so large
+- How can stochasticity be important when the population size is so large?
 
 ---
 
@@ -210,22 +290,34 @@ Frost and McLean 1994
 
 ---
 
+## Testing for spatial differentiation
+
+- $F_{ST}$: the fraction of genetic variation *within* subpopulations relative to *total* variation
+- Under a metapopulation model:
+
+<br>
+
+$$
+F_{ST} = \frac{k+N_s x}{k(1+N_sx)} \approx \frac{1}{k}
+$$
+
+---
+
 ## Evidence for micro-scale spatial differentiation
+
+<br>
 
 <div>
 <table frame="hsides" rules="groups" id="table-1">
                            <thead id="thead-1">
                               <tr id="tr-1">
                                  <th rowspan="1" colspan="1" id="th-1">Patient</th>
-                                 <th rowspan="1" colspan="1" id="th-2">Number of pulps analyzed</th>
+                                 <th rowspan="1" colspan="1" id="th-2">Pulps</th>
                                  <th rowspan="1" colspan="1" id="th-3">Between-pulp
-                                    variation <em>V</em><sub>a</sub></th>
-                                 <th rowspan="1" colspan="1" id="th-4">Total variation
-                                    <em>V</em><sub>b</sub></th>
+                                    variation</th>
+                                 <th rowspan="1" colspan="1" id="th-4">Total variation </th>
                                  <th rowspan="1" colspan="1" id="th-5"><em>F</em><sub>ST</sub>
-                                    (⩵<em>V</em><sub>a</sub>/<em>V</em><sub>b</sub>)
-                                    
-                                 </th>
+                                                                   </th>
                               </tr>
                            </thead>
                            <tbody align="center" id="tbody-1" class="table-center">
@@ -285,7 +377,26 @@ Frost and McLean 1994
 
 ---
 
+## Testing for founder effects
+
+- Under neutrality, for a constant population size at equilibrium:
+
+<img src="assets/img/tajdeqn.png" style="border: 0px;" width="40%">
+
+- Tajima's D compares the estimates of $\theta$ obtained from pairwise distances and from segregating sites:
+  - $D<0$: e.g. population bottleneck
+  - $D=0$: e.g. constant population size
+  - $D>0$: e.g. population contraction
+
+---
+
 ## Evidence for local founder effects
+
+<img src="assets/img/tajd.jpg" style="border: 0px;" width="60%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Frost et al. (2001) PNAS</em></p>
+</div>
 
 ---
 
@@ -311,7 +422,7 @@ Frost and McLean 1994
 
 ## Resistant mutants are 'fit'
 
-<img src="assets/img/k103rc.jpg" style="border: 0px;" width="80%">
+<img src="assets/img/k103rc.jpg" style="border: 0px;" width="70%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Little, Frost et al. J. Virol. (2008)</em></p>
@@ -324,7 +435,7 @@ Frost and McLean 1994
 - Acquired resistance can emerge rapidly
   - Pre-existing, but variable, resistant virus
   - Decreasing wild-type viruses results in more target cells, facilitating the emergence of resistance
-- Transmitted fitness may revert rapidly
+- Transmitted fitness may revert slowly
 - Given rapid escape and slow reversion, we would expect transmitted resistance to be very common
   - Transmitted resistance is rarer than expected, possibly due to lower transmission rates
 
@@ -345,7 +456,7 @@ Frost and McLean 1994
 <img src="assets/img/abreview.png" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
-<p><em>Little, Frost et al. Curr. Opin. HIV AIDS (2008)</em></p>
+<p><em>Frost et al. Curr. Opin. HIV AIDS (2008)</em></p>
 </div>
 
 ---
@@ -361,7 +472,7 @@ Frost and McLean 1994
 <img src="assets/img/neut2.png" style="border: 0px;" width="50%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
-<p><em>Little, Frost et al. PNAS (2005)</em></p>
+<p><em>Frost et al. PNAS (2005)</em></p>
 </div>
 
 ---
@@ -371,12 +482,26 @@ Frost and McLean 1994
 <img src="assets/img/neut3.png" style="border: 0px;" width="85%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
-<p><em>Little, Frost et al. PNAS (2005)</em></p>
+<p><em>Frost et al. PNAS (2005)</em></p>
 </div>
 
 ---
 
-## Modeling neutralisation escape
+## Modelling escape from antibody responses
+
+- It was long perceived that antibodies are ineffective in controlling HIV
+- Some individuals *do* mount powerful responses
+  - Too little, too late
+
+<img src="assets/img/hs97.png" style="border: 0px;" width="50%">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Haraguchi and Sasaki (1997)</em></p>
+</div>
+
+---
+
+## Model results
 
 <img src="assets/img/modelneut.png" style="border: 0px;" width="50%">
 
@@ -393,13 +518,6 @@ Frost and McLean 1994
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Little, Frost et al. PNAS (2005)</em></p>
 </div>
-
----
-
-## Population level patterns
-
-- If HIV escapes from the immune system rapidly, how is it recognised at all, decades after its spread?
-  - Escape is highly specific
 
 ---
 
@@ -441,6 +559,52 @@ Frost and McLean 1994
 
 ---
 
+## Capturing within- and between-host variation
+
+- Between-host variation:
+  - $dN$ and $dS$ counted along the viral phylogeny
+- Within-host variation
+  - Compare nonsynonymous and synonymous *mixtures*
+
+---
+
+## What are mixtures?
+
+- When we sequence a sample of blood from an infected person, we actually sequence a *swarm* of different variants
+- Variation in this swarm can be detected by mixtures
+
+<br>
+
+<img src="assets/img/mix.png" width="40%" style="border:0px;">
+
+---
+
+## Why are mixtures important?
+
+<img src="assets/img/mixsweep.png" width="70%" style="border: 0px;">
+
+---
+
+## Selection pressures within and between hosts
+
+<img src="assets/img/hivrtdnds.png" width="50%" style="border: 0px;">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Poon et al. PLoS Path 2007</em></p>
+</div>
+
+---
+
+## Selection on CTL epitopes
+
+<img src="assets/img/hivrtmix.png" width="80%" style="border: 0px;">
+
+<div style="font-family: Arial; font-size: 12px;" align="right">
+<p><em>Poon et al. PLoS Path 2007</em></p>
+</div>
+
+---
+
 ## Conclusions
 
 - Our ability to understand what goes on *within* the HIV infected individual is attributable to increased data
@@ -450,10 +614,26 @@ Frost and McLean 1994
   - Modeling has moved from being 'data-free' to one which is data-intensive
 - HIV evolution and dynamics occurs at the 'front line' within the individual, and variation at the population level reflects averaging over the selection pressures from many hosts
 
+--- ds:blackout
 
---- ds:cobalt
+<h2 style="color:#FFFFFF">Acknowledgements</h2>
 
-## Acknowledgements
+<div style="color:#FFFFFF">
+
+- Too many to list, but especially
+  - Angela McLean
+  - Sergei Kosakovsky Pond
+  - Art Poon
+  - Doug Richman
+  
+</div>
+
+<br>
+
+<h3 style="color:#FFFFFF">Funding</h2>
+
+<img src="assets/img/mrc.png" width="20%" style="border: 0px;">
+
 
 
 

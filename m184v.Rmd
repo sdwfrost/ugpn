@@ -1,0 +1,31 @@
+```{r,echo=FALSE,cache=FALSE}
+suppressPackageStartupMessages(require(DiagrammeR))
+grViz("
+digraph {
+
+  # graph attributes
+  graph [overlap = true]
+
+  # node attributes
+  node [shape = box,
+        fontname = Helvetica,
+        color = blue]
+
+  # edge attributes
+  edge [color = gray]
+
+  # node statements
+  M; I; V
+
+  # node attributes
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9]
+
+  # edge statements
+  M->I [label='ATG to ATA',fontsize=6];
+  M->V [label='ATG to GTG',fontsize=6];
+  
+}
+")
+```
