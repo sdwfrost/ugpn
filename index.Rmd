@@ -668,7 +668,7 @@ $$
 
 --- ds:blackout
 
-<h2 style="color:#FFFFFF">Acknowledgements</h2>
+<h2 style="color:#FFFF00">Acknowledgements</h2>
 
 <div style="color:#FFFFFF">
 
@@ -682,7 +682,7 @@ $$
 
 <br>
 
-<h3 style="color:#FFFFFF">Funding</h2>
+<h3 style="color:#FFFF00">Funding</h2>
 
 <img src="assets/img/mrc.png" width="20%" style="border: 0px;">
 
