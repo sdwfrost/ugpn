@@ -587,7 +587,7 @@ $$
 
 ## CTL responses and escape
 
-<img src="assets/img/poon2007fig2.png" style="border: 0px;" width="85%">
+<img src="assets/img/poon2007fig2.png" style="border: 0px;" width="70%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Poon et al. PLoS Path 2007</em></p>
