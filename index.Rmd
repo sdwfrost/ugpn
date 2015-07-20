@@ -505,7 +505,7 @@ $$
 
 ## Dynamics of antibody responses
 
-<img src="assets/img/abreview.png" style="border: 0px;" width="60%">
+<img src="assets/img/abreview.png" style="border: 0px;" width="45%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. Curr. Opin. HIV AIDS (2008)</em></p>
