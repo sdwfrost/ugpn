@@ -269,7 +269,7 @@ function Switch(picname,location) {
 
 ## Within host metapopulation dynamics
 
-<img src="assets/img/metapop.jpg" style="border: 0px;" width="40%">
+<img src="assets/img/metapop.jpg" style="border: 0px;" width="30%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. PNAS 2001</em></p>
@@ -392,7 +392,7 @@ $$
 
 ## Evidence for local founder effects
 
-<img src="assets/img/tajd.jpg" style="border: 0px;" width="60%">
+<img src="assets/img/tajd.jpg" style="border: 0px;" width="45%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. (2001) PNAS</em></p>
