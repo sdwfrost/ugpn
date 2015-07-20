@@ -469,7 +469,7 @@ $$
 
 ## Within-host antibody responses
 
-<img src="assets/img/neut2.png" style="border: 0px;" width="50%">
+<img src="assets/img/neut2.png" style="border: 0px;" width="35%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. PNAS (2005)</em></p>
