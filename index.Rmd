@@ -639,7 +639,7 @@ $$
 
 ## Selection pressures within and between hosts
 
-<img src="assets/img/hivrtdnds.png" width="50%" style="border: 0px;">
+<img src="assets/img/hivrtdnds.png" width="35%" style="border: 0px;">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Poon et al. PLoS Path 2007</em></p>
@@ -649,7 +649,7 @@ $$
 
 ## Selection on CTL epitopes
 
-<img src="assets/img/hivrtmix.png" width="80%" style="border: 0px;">
+<img src="assets/img/hivrtmix.png" width="65%" style="border: 0px;">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Poon et al. PLoS Path 2007</em></p>
