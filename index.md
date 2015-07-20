@@ -463,7 +463,7 @@ $$
 
 ## Measuring antibody responses
 
-<img src="assets/img/monogram.png" style="border: 0px;" width="80%">
+<img src="assets/img/monogram.png" style="border: 0px;" width="60%">
 
 ---
 
