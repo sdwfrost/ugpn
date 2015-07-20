@@ -633,7 +633,7 @@ $$
 
 ## Why are mixtures important?
 
-<img src="assets/img/mixsweep.png" width="70%" style="border: 0px;">
+<img src="assets/img/mixsweep.png" width="55%" style="border: 0px;">
 
 ---
 
