@@ -474,7 +474,7 @@ $$
 
 ## Resistant mutants are 'fit'
 
-<img src="assets/img/k103rc.jpg" style="border: 0px;" width="70%">
+<img src="assets/img/k103rc.jpg" style="border: 0px;" width="50%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Little, Frost et al. J. Virol. (2008)</em></p>
