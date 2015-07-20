@@ -605,14 +605,47 @@ $$
 
 ---
 
+## Discussion: Current directions
+
+- There is only a glimmer of hope for vaccines:
+  - Rapid rate of escape from immune responses
+  - High genetic variation
+- Treatment has improved tremendously
+  - Can we cure HIV?
+  - Can we use treatment as prevention (TasP)?
+
+---
+
+## Treatment as Prevention
+
+- Rather than vaccinate uninfected individuals, treat infected ones
+  - Can result in >95% reduction in infectiousness
+- Mathematical models have demonstrated that TasP could result in significant drops in HIV incidence
+  - Eaton et al. (2012)
+- Mathematical models can also help interpret sequence data collected during TasP trials
+
+---
+
+## PANGEA-HIV
+
+- Phylogenetics and Networks for Generalised HIV Epidemics in Africa
+- Gates Foundation funded project to generate up to 20,000 full length genomes
+- Methods comparison exercise [www.pangea-hiv.org](http://www.pangea-hiv.org):
+  - Realistic individual-based models of HIV transmission
+  - Generation of viral phylogenies
+  - Generation of sequence data from the phylogenies
+- Can we reconstruct the epidemic from the simulated sequence data?
+
+---
+
 ## Conclusions
 
 - Our ability to understand what goes on *within* the HIV infected individual is attributable to increased data
   - Availability of therapy
   - Sequence data
   - Phenotypic data
-  - Modeling has moved from being 'data-free' to one which is data-intensive
-- HIV evolution and dynamics occurs at the 'front line' within the individual, and variation at the population level reflects averaging over the selection pressures from many hosts
+- Modeling has moved from being 'data-free' to one which is data-intensive
+- This availability of data has also fed the development of molecular epidemiological techniques, currently being applied to understand patterns of incidence and prevalence at the population level
 
 --- ds:blackout
 
@@ -620,12 +653,13 @@ $$
 
 <div style="color:#FFFFFF">
 
-- Too many to list, but especially
+- Too many to list individually, but especially
   - Angela McLean
   - Sergei Kosakovsky Pond
   - Art Poon
   - Doug Richman
-  
+  - Erik Volz
+
 </div>
 
 <br>
