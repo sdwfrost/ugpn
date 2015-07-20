@@ -506,7 +506,7 @@ $$
 <img src="assets/img/modelneut.png" style="border: 0px;" width="35%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
-<p><em>Little, Frost et al. PNAS (2005)</em></p>
+<p><em>Frost et al. PNAS (2005)</em></p>
 </div>
 
 ---
@@ -516,7 +516,7 @@ $$
 <img src="assets/img/modelneut2.png" style="border: 0px;" width="85%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
-<p><em>Little, Frost et al. PNAS (2005)</em></p>
+<p><em>Frost et al. PNAS (2005)</em></p>
 </div>
 
 ---
