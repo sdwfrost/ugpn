@@ -282,8 +282,13 @@ function Switch(picname,location) {
 - Implications:
   - Repeated founder effects result in low effective population sizes
 
-<img src="assets/img/metapop_eqn.gif" style="border: 0px;" width="40%">
+$$
+\frac{N_e}{N}=\frac{k(1-x)(1+N_S x)}{N_S x (3x+2N_S x -1)} \propto \frac{k}{N_S}
+$$
 
+<!--
+<img src="assets/img/metapop_eqn.gif" style="border: 0px;" width="40%">
+-->
 - Predictions:
   - There should be fine-scale spatial structure
   - Within subpopulations, there should be evidence of founder effects
