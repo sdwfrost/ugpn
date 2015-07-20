@@ -276,7 +276,7 @@ ggplot(d,aes(x=Dose,y=Population,color=Type))+geom_line()+ylab("")
 
 ## Rise of M184V
 
-<img src="assets/img/m184v_line.jpg" style="border: 0px;" width="80%">
+<img src="assets/img/m184v_line.jpg" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. J. Virol. 2000</em></p>
@@ -294,7 +294,7 @@ ggplot(d,aes(x=Dose,y=Population,color=Type))+geom_line()+ylab("")
 
 ## Fluctuations in M184V/I before therapy
 
-```{r,echo=FALSE,fig.width=8,fig.height=5}
+```{r,echo=FALSE,fig.width=8,fig.height=5,out.extra='style="border:0px"'}
 m184mu <- function(Ne,mu1=6e-5,mu2=1.5e-5,s1=0.45,s2=0.28){
   ((mu2*s1)/(mu1*s2))*(1+(1/(Ne*mu1)))
 }

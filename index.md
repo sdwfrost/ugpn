@@ -237,7 +237,7 @@ function Switch(picname,location) {
 
 ## Rise of M184V
 
-<img src="assets/img/m184v_line.jpg" style="border: 0px;" width="80%">
+<img src="assets/img/m184v_line.jpg" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Frost et al. J. Virol. 2000</em></p>
@@ -255,7 +255,7 @@ function Switch(picname,location) {
 
 ## Fluctuations in M184V/I before therapy
 
-![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5-1.png) 
+<img src="assets/fig/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="border:0px" />
 
 
 ---
