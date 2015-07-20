@@ -402,7 +402,7 @@ $$
 
 ## Transmission and reversion of drug resistance
 
-<img src="assets/img/transmittedresistance.jpg" style="border: 0px;" width="80%">
+<img src="assets/img/transmittedresistance.jpg" style="border: 0px;" width="60%">
 
 <div style="font-family: Arial; font-size: 12px;" align="right">
 <p><em>Little, Frost et al. J. Virol. (2008)</em></p>
